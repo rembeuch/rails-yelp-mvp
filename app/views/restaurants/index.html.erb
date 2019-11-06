@@ -1,8 +1,14 @@
-<h1>Restaurants list</h1>
-<ul>
-<% @restaurants.each do |restaurant| %>
-<li><%= restaurant.name %>:<%= restaurant.category %> || tel:<%= restaurant.phone_number %> // <%= restaurant.address %> <%= link_to 'Show', restaurant %></li>
-<% end %>
-</ul>
+<div class="container">
+  <div>
+<h1 class="border border-success rounded-pill text-center"> Restaurants list</h1>
+</div>
+  <ul>
+  <% @restaurants.each do |restaurant| %>
+  <div>
+    <li class="card border-success"><strong><%= restaurant.name %>:</strong> <%= restaurant.category %> || tel:<%= restaurant.phone_number %> // <%= restaurant.address %> <%= link_to 'Show', restaurant, class: "btn-success" %></li>
+  </div>
+  <% end %>
+  </ul>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+  <%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-primary" %>
+</div>

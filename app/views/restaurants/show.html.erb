@@ -1,7 +1,7 @@
 
 <p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
+  <strong> Name:</strong>
+  <%=  @restaurant.name  %>
 </p>
 
 <p>
@@ -15,9 +15,14 @@
 </p>
 
 
+<p>
+  <strong>Phone Number</strong>
+  <%= @restaurant.phone_number %>
+</p>
+
 <ul>
   <% @restaurant.reviews.each do |review| %>
-    <li>"<%= review.content %>" rating:<%= review.rating %></li>
+    <li>"<%= review.content %>" rating: <%= review.rating %></li>
   <% end %>
 </ul>
 
